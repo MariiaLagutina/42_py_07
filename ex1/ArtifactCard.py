@@ -9,7 +9,7 @@ class ArtifactCard(Card):
         rarity: CardRarity,
         durability: int,
         effect: str
-    ):
+    ) -> None:
         super().__init__(name, cost, rarity)
 
         if not isinstance(durability, int) or durability <= 0:

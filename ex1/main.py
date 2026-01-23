@@ -6,7 +6,7 @@ from ex1.Deck import Deck
 
 
 def main():
-    print("=== DataDeck Deck Builder ===")
+    print("\n=== DataDeck Deck Builder ===")
 
     creature = CreatureCard(
         name="Fire Dragon",

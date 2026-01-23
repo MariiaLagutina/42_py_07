@@ -1,3 +1,4 @@
+from typing import Any
 from ex0.Card import Card, CardRarity
 
 
@@ -33,7 +34,7 @@ class CreatureCard(Card):
             "effect": "Creature summoned to battlefield",
         }
 
-    def attack_target(self, target) -> dict:
+    def attack_target(self, target: Any) -> dict:
         return {
             "attacker": self.name,
             "target": target,

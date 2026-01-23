@@ -10,7 +10,7 @@ def get_interface_methods(cls):
 
 
 def main():
-    print("=== DataDeck Ability System ===")
+    print("\n=== DataDeck Ability System ===")
 
     elite = EliteCard(
         name="Arcane Warrior",

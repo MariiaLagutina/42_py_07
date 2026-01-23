@@ -25,7 +25,7 @@ class FantasyCardFactory(CardFactory):
         ("Sword of Power", 3, CardRarity.RARE, 3, "+2 attack"),
     ]
 
-    def create_creature(self, name_or_power=None):
+    def create_creature(self, name_or_power=None) -> CreatureCard:
         name, cost, rarity, attack, health = random.choice(self._CREATURES)
 
         if isinstance(name_or_power, str):
@@ -41,7 +41,7 @@ class FantasyCardFactory(CardFactory):
             health=health,
         )
 
-    def create_spell(self, name_or_power=None):
+    def create_spell(self, name_or_power=None) -> SpellCard:
         name, cost, rarity, effect = random.choice(self._SPELLS)
 
         if isinstance(name_or_power, str):
@@ -54,7 +54,7 @@ class FantasyCardFactory(CardFactory):
             effect_type=effect,
         )
 
-    def create_artifact(self, name_or_power=None):
+    def create_artifact(self, name_or_power=None) -> ArtifactCard:
         name, cost, rarity, durability, effect = random.choice(self._ARTIFACTS)
 
         if isinstance(name_or_power, int):

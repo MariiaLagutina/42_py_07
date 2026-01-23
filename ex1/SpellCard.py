@@ -1,3 +1,4 @@
+from typing import Any
 from ex0.Card import Card, CardRarity
 
 
@@ -8,7 +9,7 @@ class SpellCard(Card):
         cost: int,
         rarity: CardRarity,
         effect_type: str
-    ):
+    ) -> None:
         super().__init__(name, cost, rarity)
 
         if not isinstance(effect_type, str) or not effect_type:
@@ -23,7 +24,7 @@ class SpellCard(Card):
             "effect": f"Deal {self.effect_type}",
         }
 
-    def resolve_effect(self, targets: list) -> dict:
+    def resolve_effect(self, targets: list[Any]) -> dict:
         return {
             "spell": self.name,
             "rarity": self.rarity.value,

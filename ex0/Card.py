@@ -16,6 +16,7 @@ class Card(ABC):
 
     @abstractmethod
     def play(self, game_state: dict) -> dict:
+        """Play the card and return the resulting game state changes."""
         pass
 
     def get_card_info(self) -> dict:

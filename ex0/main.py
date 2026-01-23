@@ -4,7 +4,7 @@ from ex0.Card import CardRarity
 
 
 def main():
-    print("=== DataDeck Card Foundation ===")
+    print("\n=== DataDeck Card Foundation ===")
     print("\nTesting Abstract Base Class Design:\n")
 
     # try:
